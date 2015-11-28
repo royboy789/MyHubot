@@ -69,3 +69,19 @@ module.exports = (robot) ->
       else
         comic = JSON.parse body
         res.send "#{comic.img}"
+  
+  robot.respond /check the weather in (.*) /i, (res) ->
+    location = res.match[1]
+    base_url = 'http://api.openweathermap.org/data/2.5/weather?q='
+    units = '&units=imperial'
+    id = '&APPID=YOURIDHERE'
+    res.http( base_url + location + id + units )
+    .get() (err, resp, body ) ->
+      if err
+        res.send "error: #{err}"
+        console.log( err )
+        return
+      weather = JSON.parse body
+      send = "It's currently #{weather.main.temp} degrees in #{weather.name} "
+      send += "with a wind speed of #{weather.wind.speed}"
+      res.send send
