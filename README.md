@@ -1,6 +1,9 @@
 # MyHubot
 Hubot which i run on my slack channel, thought I'd add some fun.
 
+## Installation ##
+Copy the bot.coffee file and put it into your `/scripts` directory of your hubot and restart your hubot app! thats all.
+
 ## Working ##
 - `chuck norris me` - displays a random chuck norris quote powered by [ICNDB](http://www.icndb.com/api/)
 - `ron swanson me` - display a random Ron Swanson quote powered by [Ron Swanson Quotes](http://ron-swanson-quotes.herokuapp.com)
