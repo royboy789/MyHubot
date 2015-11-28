@@ -60,3 +60,12 @@ module.exports = (robot) ->
         console.log( body )
         answer = JSON.parse body
         res.send "#{answer.answer}! #{answer.image}"
+  robot.respond /xkcd me/i, (res) ->
+    res.http('http://xkcd.com/info.0.json')
+    .get() (err, resp, body) ->
+      if err
+        res.send "try again"
+        return
+      else
+        comic = JSON.parse body
+        res.send "#{comic.img}"
