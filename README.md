@@ -9,6 +9,7 @@ Copy the bot.coffee file and put it into your `/scripts` directory of your hubot
 - `ron swanson me` - display a random Ron Swanson quote powered by [Ron Swanson Quotes](http://ron-swanson-quotes.herokuapp.com)
 - `yes or no` - displays the answer to yes or no with a gif, powered by [YesNo.wtf](http://yesno.wtf)
 - `xkcd me` - displays the latest xkcd comic powered by [XKCD](http://xkcd.com)
+- `check the weather in [city-name]` - check the current weather in a location. Will respond with temperature and wind speed, powered by [openweathermap.org](http://api.openweathermap.org)
 
 ## Work In Progress ##
 - `meme [type] with [text line 1] and [text line 2]` - displays a custom meme from imgflip
